@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
 
@@ -9,7 +9,7 @@ require('dotenv').config()
 const app = express()
 
 app.use(cors({
-  // origin: 'https://makemyenergy.vercel.app',
+  origin: 'https://makemyenergy.vercel.app',
   credentials: true,
 }));
 
@@ -28,5 +28,5 @@ const subscribersRouter = require("./routes/route")
 app.use('/route', subscribersRouter)
 
 app.listen(3000, function () {
-  console.log("server running at https://52.39.44.2:8443/")
+  console.log("server running at https://troubled-dove-trench-coat.cyclic.cloud")
 });
